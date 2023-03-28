@@ -1534,6 +1534,7 @@ class WP_List_Table {
 			// Comments column uses HTML in the display name with screen reader text.
 			// Strip tags to get closer to a user-friendly string.
 			$data = 'data-colname="' . esc_attr( wp_strip_all_tags( $column_display_name ) ) . '"';
+			$classes = apply_filters("column_classes_".$column_name, $classes);
 
 			$attributes = "class='$classes' $data";
 
